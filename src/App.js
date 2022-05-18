@@ -26,9 +26,10 @@ const App = () => {
           }
           const data = await response.json()
           console.log(data)
-          setAllAnimals(data)
+          // setAllAnimals(data)
         } catch (err) {
-          setShowError(err.message)
+          console.log(err)
+          // setShowError(err.message)
         }
         
       }
