@@ -11,11 +11,21 @@ const App = () => {
     useEffect(() => {
       const fetchAnimals = async () => {
         try {
-          const response = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand/10");
+          const response = await fetch("https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles", {
+            method: "POST",
+            headers: {
+              "x-api-key": "PYfVzyOY6i1xzixnh60rI6aVO0XMrn4Gaa2uYecx",
+              "Content-Type": "application/json"
+            },
+            body: {
+              "registrationNumber": "TE57VRN"
+            }
+          });
           if(!response.ok){
             throw new Error(response.statusText)
           }
           const data = await response.json()
+          console.log(data)
           setAllAnimals(data)
         } catch (err) {
           setShowError(err.message)
@@ -32,14 +42,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Animal Encyclopedia</h1>
+      {/* <h1>Animal Encyclopedia</h1>
       <h2>{showError}</h2>
       <div className="animalWrap">
         {allAnimals.map((animal, index) => {
           return <img key={index} src={animal.image_link} alt={`${animal.name}`} onClick={() => handleClick(animal)}/>
         })}
       </div>
-      {showModal && <AnimalModal closeModal={setShowModal} animal={currentAnimal}/>}
+      {showModal && <AnimalModal closeModal={setShowModal} animal={currentAnimal}/>} */}
     </div>
   );
 }
