@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import './App.css';
-import AnimalModal from "./AnimalModal";
+// import AnimalModal from "./AnimalModal";
 
 const App = () => {
-    const [allAnimals, setAllAnimals] = useState([]);
-    const [currentAnimal, setCurrentAnimal] = useState({});
-    const [showModal, setShowModal] = useState(false);
-    const [showError, setShowError] = useState("");
+    // const [allAnimals, setAllAnimals] = useState([]);
+    // const [currentAnimal, setCurrentAnimal] = useState({});
+    // const [showModal, setShowModal] = useState(false);
+    // const [showError, setShowError] = useState("");
 
     useEffect(() => {
       const fetchAnimals = async () => {
@@ -35,10 +35,10 @@ const App = () => {
       fetchAnimals()
     }, []);
 
-    const handleClick = (animalObj) => {
-      setCurrentAnimal(animalObj);
-      setShowModal(true)
-    }
+    // const handleClick = (animalObj) => {
+    //   setCurrentAnimal(animalObj);
+    //   setShowModal(true)
+    // }
 
   return (
     <div className="App">
