@@ -6,7 +6,7 @@ const App = () => {
     // const [allAnimals, setAllAnimals] = useState([]);
     // const [currentAnimal, setCurrentAnimal] = useState({});
     // const [showModal, setShowModal] = useState(false);
-    // const [showError, setShowError] = useState("");
+    const [showError, setShowError] = useState("");
 
     useEffect(() => {
       const fetchAnimals = async () => {
@@ -28,8 +28,7 @@ const App = () => {
           console.log(data)
           // setAllAnimals(data)
         } catch (err) {
-          console.log(err)
-          // setShowError(err.message)
+          setShowError(err.message)
         }
         
       }
@@ -43,9 +42,9 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <h1>Animal Encyclopedia</h1>
+      <h1>Animal Encyclopedia</h1>
       <h2>{showError}</h2>
-      <div className="animalWrap">
+      {/* <div className="animalWrap">
         {allAnimals.map((animal, index) => {
           return <img key={index} src={animal.image_link} alt={`${animal.name}`} onClick={() => handleClick(animal)}/>
         })}
