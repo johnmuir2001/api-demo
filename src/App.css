@@ -1,0 +1,124 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.imageWrapper img:hover {
+  height: 212px;
+  width: 212px;
+  margin: 4px;
+}
+
+#modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modalBox {
+  background-color: white;
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: scroll;
+  position: relative;
+}
+
+#leftSection {
+  height: 500px;
+  width: 300px;
+  background-color: white;
+}
+#leftSection img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#rightSecion {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 600px;
+  background-color: rgb(243, 243, 243);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#ratingWrapper {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+#rating {
+  position: relative;
+  height: 18px;
+  width: 100px;
+}
+.star {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100px auto;
+}
+
+.black {
+  background-image: url('./images/rating.png');
+}
+.blue {
+  background-image: url('./images/rating_blue.png');
+}
+
+h1, h4, h5, h6 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0 5px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+#closeIcon {
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: 0px 0px 10px white;
+  cursor: pointer;
+}
